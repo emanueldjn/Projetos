@@ -33,7 +33,7 @@ export function Select({ name, control, placeholder, error, options }: SelectPro
         render={({ field: { onChange, onBlur, value }}) => (
             <>
                 <TouchableOpacity style={styles.select} onPress={() => setVisible(true)}>
-                    <Text>Selecione algo</Text>
+                    <Text>{value ? options.find(option => option.value === value)?.label : placeholder}</Text>
                     <Feather name="arrow-down" size={16} color='#000'/>
                 </TouchableOpacity>
 
@@ -55,7 +55,15 @@ export function Select({ name, control, placeholder, error, options }: SelectPro
                                 data={options}
                                 keyExtractor={(item) => item.value.toString()} // identificar qual é o identificador
                                 renderItem={({item}) => (
-                                    <TouchableOpacity style={styles.option}>
+                                    <TouchableOpacity 
+                                        style={styles.option}
+                                        onPress={() => {
+                                            onChange(item.value);
+                                            setVisible(false);
+
+                                        }}
+                                        >
+                                        
                                         <Text>{item.label}</Text>
                                     </TouchableOpacity>
                                     

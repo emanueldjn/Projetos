@@ -21,13 +21,14 @@ export function Header({step, title}: HeaderProps) {
                     <Pressable onPress={() => router.back()}>
                         <Feather name="arrow-left" size={24} color="#000"/>
                     </Pressable>
-
+                    <Text style={styles.title}>{title}</Text>
                     <Text style={styles.text}>
                         {step} <Feather name='loader' size={16} color='#000'/>
                     </Text>
+                    
                 </View>
 
-                <Text style={styles.title}>{title}</Text>
+                
 
 
             </View>
@@ -47,19 +48,16 @@ const styles = StyleSheet.create({
     content: {
         paddingLeft: 16,
         paddingRight: 16,
-        paddingBottom: 34,
+        paddingBottom: 24,
         borderBottomEndRadius: 10,
         borderBottomLeftRadius: 10,
     },
 
     row: {
         flexDirection: 'row',
-        gap: 8,
-        alignItems: 'center',
-       /* flexDirection: 'row',
         alignItems: 'center',
         justifyContent:'space-between',
-        marginBottom: 16 */
+        marginBottom: 16 
     },
 
     text: {

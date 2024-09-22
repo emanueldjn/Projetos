@@ -5,10 +5,10 @@ import { Link } from 'expo-router'
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/images/logo.png')} />
+      <Image source={require('../assets/images/logonutrition.png')} />
 
       <Text style={styles.title}>
-        Dieta<Text style={{color: colors.white}}>.AI</Text>
+        Nutrition<Text style={{color: colors.white}}>.AI</Text>
       </Text>
 
       <Text style={styles.text}>Sua dieta personalizada com interligencia artificial</Text>

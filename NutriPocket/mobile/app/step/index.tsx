@@ -84,7 +84,7 @@ export default function Step() {
                 />
 
                 
-                <Text style={styles.label}>Altura:</Text>
+                <Text style={styles.label}>Idade:</Text>
                 <Input 
                     name='age'
                     control={control}
@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.backgroud,
-        
     },
 
     content: {
